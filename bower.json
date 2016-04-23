@@ -1,0 +1,30 @@
+{
+  "name": "proton-datetime-picker",
+  "description": "Proton: DateTime Picker",
+  "main": "src/proton.datetime-picker.js",
+  "authors": [
+    "Milad Naseri <mmnaseri@programmer.net>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "touch",
+    "datepicker",
+    "time",
+    "date",
+    "list",
+    "choice",
+    "select"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.3"
+  }
+}

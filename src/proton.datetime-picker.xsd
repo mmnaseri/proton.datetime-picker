@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://github.com/mmnaseri/proton.datetime-picker"
+           xmlns="http://github.com/mmnaseri/proton.datetime-picker"
+           elementFormDefault="qualified">
+
+    <xs:element name="datetime-picker" type="DateTimePicker"/>
+
+    <xs:complexType name="DateTimePicker">
+        <xs:annotation>
+            <xs:documentation source="description">This is the root element for the datetime component.</xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="ng-model" type="xs:string" use="optional">
+            <xs:annotation>
+                <xs:documentation source="description">Use this attribute to specify an ngModel on the element</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+</xs:schema>
