@@ -15,5 +15,62 @@
                 <xs:documentation source="description">Use this attribute to specify an ngModel on the element</xs:documentation>
             </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="type" type="DateTimePickerType" use="optional" default="dateTime">
+            <xs:annotation>
+                <xs:documentation source="description">The type of component that should be rendered</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="hours" type="DateTimePickerHours" use="optional" default="half">
+            <xs:annotation>
+                <xs:documentation source="description">Whether the hours should be displayed in 12 hour format (half)
+                or 24 hour format (full).</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="months" type="DateTimePickerMonths" use="optional" default="names">
+            <xs:annotation>
+                <xs:documentation source="description">Whether the component should display month names
+                or month numbers</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="attachment" type="DateTimePickerAttachment" use="optional" default="inline">
+            <xs:annotation>
+                <xs:documentation source="description">Component attachment for the underlying `proton-multi-list-picker`
+                component</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="done" type="xs:string" use="optional">
+            <xs:annotation>
+                <xs:documentation source="description">AngularJS expression to call when the `Done` button on the
+                attached component is clicked. This is not used when attachment is set to `inline` (default).</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
+    <xs:simpleType name="DateTimePickerType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="dateTime"/>
+            <xs:enumeration value="date"/>
+            <xs:enumeration value="time"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DateTimePickerHours">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="half"/>
+            <xs:enumeration value="full"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DateTimePickerAttachment">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="inline"/>
+            <xs:enumeration value="modal"/>
+            <xs:enumeration value="top"/>
+            <xs:enumeration value="bottom"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DateTimePickerMonths">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="names"/>
+            <xs:enumeration value="abbreviations"/>
+            <xs:enumeration value="numbers"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

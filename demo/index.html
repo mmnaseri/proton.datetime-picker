@@ -5,7 +5,7 @@
     <title>Demo</title>
     <link rel="stylesheet" href="../lib/proton.multi-list-picker.css">
     <script src="../bower_components/angular/angular.js"></script>
-    <script src="../lib/proton.multi-list-picker.min.js"></script>
+    <script src="../lib/proton.multi-list-picker.js"></script>
     <script src="../src/proton.datetime-picker.js"></script>
     <script src="app/app.js"></script>
     <script type="application/javascript" src="http://localhost:13001/livereload.js"></script>
@@ -16,6 +16,18 @@
     </style>
 </head>
 <body ng-controller="MainController">
-
+<div>{{model.dateTime | date:"yyyy/MM/dd, HH:mm"}}</div>
+<proton:datetime-picker ng-model="model.dateTime" type="dateTime">
+</proton:datetime-picker>
+<proton:datetime-picker ng-model="model.dateTime" type="dateTime" hours="full">
+</proton:datetime-picker>
+<div>{{model.date | date:"yyyy/MM/dd"}}</div>
+<proton:datetime-picker ng-model="model.date" type="date">
+</proton:datetime-picker>
+<div>{{model.time.hour < 10 ? "0" : ""}}{{model.time.hour}}:{{model.time.minute < 10 ? "0" : ""}}{{model.time.minute}} {{model.time.time}}</div>
+<proton:datetime-picker ng-model="model.time" type="time">
+</proton:datetime-picker>
+<proton:datetime-picker ng-model="model.time" type="time" hours="full">
+</proton:datetime-picker>
 </body>
 </html>

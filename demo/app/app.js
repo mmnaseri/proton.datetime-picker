@@ -17,12 +17,12 @@
     });
 
     module.controller("MainController", function ($scope) {
-        $scope.date = new Date();
-        $scope.dateTime = new Date();
-        $scope.time = {
+        $scope.model = {};
+        $scope.model.date = null;
+        $scope.model.dateTime = new Date();
+        $scope.model.time = {
             hour: 4,
-            minute: 3,
-            time: "PM"
+            minute: 3
         };
     });
 })();

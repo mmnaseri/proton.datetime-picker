@@ -5,7 +5,6 @@
 
 //Gulp main
 var gulp = require("gulp");
-var gutil = require("gulp-util");
 var uglify = require("gulp-uglify");
 var del = require("del");
 var copy = require("gulp-copy");
@@ -27,7 +26,8 @@ var paths = {
         'src/scss/**/*.scss'
     ],
     lib: [
-        "bower_components/*"
+        "bower_components/*",
+        "lib/*"
     ],
     demo: [
         "demo/app/*.js",
@@ -55,7 +55,7 @@ gulp.task("demo", function () {
 
 gulp.task("scripts", function () {
     return gulp.src(paths.scripts)
-        .pipe(concat('proton.multi-list-picker.min.js'))
+        .pipe(concat('proton.datetime-picker.min.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.dist.root))
